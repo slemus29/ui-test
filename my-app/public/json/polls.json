@@ -1,0 +1,39 @@
+[
+  {
+    "name": "Kanye West",
+    "pullDate": "Kanye West",
+    "category": "Kanye West",
+    "description": "Kanye West",
+    "image": "/images/Kanye.png",
+    "thumbsUp": 60,
+    "thumbsDown": 40
+  },
+  {
+    "name": "Kanye West",
+    "pullDate": "Kanye West",
+    "category": "Kanye West",
+    "description": "Kanye West",
+    "image": "/images/Mark.png",
+    "thumbsUp": 80,
+    "thumbsDown": 20
+  },
+  {
+    "name": "Kanye West",
+    "pullDate": "Kanye West",
+    "category": "Kanye West",
+    "description": "Kanye West",
+    "image": "/images/Christina.png",
+    "thumbsUp": 50,
+    "thumbsDown": 50
+  },
+  {
+    "name": "Kanye West",
+    "pullDate": "Kanye West",
+    "category": "Kanye West",
+    "description": "Kanye West",
+    "image": "/images/Malala.png",
+    "thumbsUp": 10,
+    "thumbsDown": 90
+  }
+
+]

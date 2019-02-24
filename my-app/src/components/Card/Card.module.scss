@@ -1,0 +1,71 @@
+.card{
+  position: relative;
+  height: 550px;
+  margin: 0 20px 20px 20px;
+  width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .containerDescription{
+    display: flex;
+    .title{
+      font-size: 41px;
+      margin: 0;
+    }
+    .iconContainer{
+      background-color: #238982;
+      margin-right: 10px;
+      height: 40px;
+        .thumbDown{
+        margin: 10px;
+        width: 20px;
+        }
+    }
+    .likeContainer{
+      display: flex;
+      .iconContainer{
+        margin-right: 10px;
+        .thumbup{
+        margin: 10px;
+        width: 20px;
+        }
+      }
+      .iconContainerUp{
+        background-color: #238982;
+      }
+      .iconContainerDown{
+        background-color: orange;
+      }
+      .button{
+        background:none;
+        color: white;
+        border: 1px solid white;
+        padding:0 16px;
+        font-size: 14px;
+      }
+    }
+  }
+  .progressBar{
+    display: flex;
+    font-size: 24px;
+    .like{
+      background-color: #238982;
+      opacity: 0.8;
+      padding: 10px 0;
+      margin-top: 10px;
+    }
+    .dislike{
+      background-color:orange;
+      opacity: 0.8;
+      padding: 10px 0;
+      margin-top: 10px;
+    }
+  }
+}
