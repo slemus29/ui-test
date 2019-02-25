@@ -1,7 +1,19 @@
 .hero{
-  background-image: url('/images/Pope.png');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.418), rgba(0, 0, 0, 0.3)), url('/images/Pope.png') ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
   height: 90vh;
+  .container{
+    padding: 50px 100px;
+    .header{
+      display: flex;
+      justify-content: space-between;
+      .title{
+        margin:0;
+        font-size: 34px;
+        color: white;
+      }
+    }
+  }
 }
