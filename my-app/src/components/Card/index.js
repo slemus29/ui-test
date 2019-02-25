@@ -20,7 +20,7 @@ const containerVote = (borderThumbUp, selectThumbUp, borderThumbDown, selectThum
 
 const voteAgainComponent = (toggleVote) => {
   return(
-    <button onClick={toggleVote}>Vote again</button>
+    <button className={style.button} onClick={toggleVote}>Vote again</button>
   )
 }
 
@@ -34,7 +34,7 @@ const lastVoteThumb = (lastVote, thumbUp, thumbDown) => {
   }
 }
 
-const Card = ({ data: { image, name, catergory, description, thumbsUp, thumbsDown, lastVote }, handleVote }) => {
+const Card = ({ data: { image, pullDate, name, category, description, thumbsUp, thumbsDown, lastVote }, handleVote }) => {
   const [thumbSelected, setThumb] = useState("none");
   const selectThumbUp = () => setThumb("up")
   const selectThumbDown = () => setThumb("down")
@@ -44,8 +44,8 @@ const Card = ({ data: { image, name, catergory, description, thumbsUp, thumbsDow
 
   const thumbsUpPercentage = Math.round(thumbsUp / (thumbsDown + thumbsUp) * 100);
   const thumbsDownPercentage = Math.round(thumbsDown / (thumbsDown + thumbsUp) * 100);
-  const thumbsUpPercentageBar = thumbsUpPercentage > 16 ? thumbsUpPercentage : 16;
-  const thumbsDownPercentageBar = thumbsDownPercentage >16 ? thumbsDownPercentage : 16;
+  const thumbsUpPercentageBar = thumbsUpPercentage > 16 ? thumbsUpPercentage : 18;
+  const thumbsDownPercentageBar = thumbsDownPercentage >16 ? thumbsDownPercentage : 18;
   const totalThumbsUp = { "width": `${thumbsUpPercentageBar}%` }
   const totalThumbsDown = { "width": `${thumbsDownPercentageBar}%` }
   const borderThumbUp = thumbSelected === 'up' ? style.borderFocus : '';
@@ -63,6 +63,7 @@ const Card = ({ data: { image, name, catergory, description, thumbsUp, thumbsDow
                                       : voteAgainComponent(toggleVote);
 
   const currentThumb = lastVoteThumb(lastVote, thumbup, thumbDown)
+  const toggleDescritpion = !alreadyVote ? description : 'Thanks you for voting!'
 
   return (
     <div className={style.card}>
@@ -71,8 +72,8 @@ const Card = ({ data: { image, name, catergory, description, thumbsUp, thumbsDow
         {currentThumb}
         <div>
           <h3 className={style.title}>{name}</h3>
-          <p>{catergory}</p>
-          <p>{description}</p>
+          <p>{`${pullDate} in ${category}`}</p>
+          <p>{toggleDescritpion}</p>
             {votingComponent}
         </div>
       </div>

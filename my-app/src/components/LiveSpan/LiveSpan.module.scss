@@ -1,0 +1,46 @@
+.liveSpan{
+  display: flex;
+  height: 56px;
+  align-items: stretch;
+  font-size: 16px;
+  .closing{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    opacity: 0.8;
+    padding: 10px 0;
+    width: 30%;
+    height: 100%;
+    text-align: right;
+    padding-right: 10px;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    align-items: center;
+    
+  }
+  .arrow{
+    display: flex;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.4);
+    &::after{
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 10px solid rgba(0, 0, 0, 0.3);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+    }
+    
+  }
+  .days{
+    display: flex;
+    background-color:rgba(255, 255, 255, 0.5);
+    opacity: 0.8;
+    padding: 10px 10px;
+    width:70%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    vertical-align: middle
+  }
+}

@@ -13,8 +13,8 @@ const Hero = () => {
           <Navigation />
         </div>
         <HeroCard />
-        <LiveSpan />
       </div>
+      <LiveSpan />
     </div>
   )
 }

@@ -1,12 +1,13 @@
 .card{
   position: relative;
   height: 550px;
-  margin: 0 20px 20px 20px;
-  width: 550px;
+  margin-bottom: 30px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: white;
+  background-color: rgba(0,0,0,0.3);
   .image{
     position: absolute;
     height: 100%;
@@ -15,6 +16,8 @@
   }
   .containerDescription{
     display: flex;
+    margin-bottom: 20px;
+    width: 80%;
     .title{
       font-size: 41px;
       margin: 0;
@@ -39,6 +42,7 @@
       display: flex;
       .iconContainer{
         margin-right: 10px;
+        cursor: pointer;
         .thumbup{
         margin: 10px;
         width: 20px;
@@ -56,6 +60,10 @@
         border: 1px solid white;
         padding:0 16px;
         font-size: 14px;
+        &:hover{
+          background-color: white;
+          color: black;
+        }
       }
     }
   }
@@ -67,15 +75,39 @@
       opacity: 0.8;
       padding: 10px 0;
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      img{
+        padding: 0 10px;
+      }
     }
     .dislike{
       background-color:orange;
       opacity: 0.8;
       padding: 10px 0;
       margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      img{
+        padding: 0 10px;
+      }
     }
   }
   .borderFocus{
+    border: 1.5px solid white;
+  }
+  .button{
+    background:none;
+    color: white;
     border: 1px solid white;
+    padding:10px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover{
+      background-color: white;
+      color: black;
+    }
   }
 }

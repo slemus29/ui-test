@@ -8,6 +8,10 @@
     li{
       font-size: 19px;
       margin: 0 20px; 
+      cursor: pointer;
+      &:hover{
+        border-bottom: 1px solid white;
+      }
     }
   }
 }
