@@ -3,9 +3,10 @@ import style from './LiveSpan.module.scss';
 
 const LiveSpan = () => {
   return(
-    <div className={style.hero}>
-      <div>Clossing in</div>
-      <div>22 Days</div>
+    <div className={style.liveSpan}>
+      <div className={style.closing}>Clossing in</div>
+      <div className={style.arrow}></div>
+      <div className={style.days}>22 Days</div>
     </div>
   )
 }

@@ -1,0 +1,16 @@
+.sticker{
+  display: flex;
+  background-color: lightgray;
+  margin: 0 auto;
+  align-items: center;
+  .leftContainer{
+    text-align: center;
+    flex: 3;
+  }
+  .description{
+    flex: 7;
+  }
+  .button{
+    flex: 1;
+  }
+}

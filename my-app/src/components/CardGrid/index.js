@@ -2,29 +2,33 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import style from './CardGrid.module.scss';
 import Card from '../Card';
-import { fetchPolls, pollData, isFetching } from '../../reducers/polls'
+import { fetchPolls, pollData, isFetching, updateThumb } from '../../reducers/polls'
 
 class CardGrid extends Component {
   constructor(props){
     super(props);
-    this.handleThumbsUp = this.handleThumbsUp.bind(this);
+    this.state = {
+      currentSelection: '',
+    }
+    this.handleVote = this.handleVote.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchPolls();
   }
   
-  handleThumbsUp (index) {
-    return ()=> {
-      console.log("redux", index)
+  handleVote (index) {
+    return (thumb)=> {
+      this.props.updateThumb(index, thumb)
     } 
   }
 
   render(){
     const {polls} = this.props;
+    console.log("current thumb", this.state)
     const totalCards = polls.map((item, index) => {
       return(
-        <Card data={item} key={index} handleThumbsUp={this.handleThumbsUp(index)}/>
+        <Card data={item} key={index} handleVote={this.handleVote(index)} />
       )
     })
     return(
@@ -39,7 +43,8 @@ const mapStateToProps = (state) => ({
 });
 
 const actionMakers = {
-  fetchPolls
+  fetchPolls,
+  updateThumb
 }
 
 export default connect(mapStateToProps, actionMakers)(CardGrid);

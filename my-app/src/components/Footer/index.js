@@ -1,9 +1,11 @@
 import React from 'react';
 import style from './Footer.module.scss';
+import facebook from '../../assets/images/facebook.png';
+import twitter from '../../assets/images/twiter.png'
 
 const Footer = () => {
   return(
-    <div>
+    <div className={style.footer}>
       <div>
         <nav className={style.nav}>
           <ul className={style.list}>
@@ -13,11 +15,11 @@ const Footer = () => {
           </ul>
         </nav>
       </div>
-      <div>
+      <div className={style.socialNetwork}>
         <ul className={style.list}>
           <li>Follow us</li>
-          <li>FaceBook</li>
-          <li>Twitter</li>
+          <li><img src={facebook}/></li>
+          <li><img src={twitter}/></li>
         </ul>
       </div>
     </div>
