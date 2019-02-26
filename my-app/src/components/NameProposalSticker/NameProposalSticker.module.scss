@@ -1,0 +1,33 @@
+.proposal{
+  background-image: url('/images/Sticker.png') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  color: #656565;
+  .text{
+    margin-left: 20px;
+  }
+  .button{
+    background-color: transparent;
+    font-size: 22px;
+    border: solid 3px #333333;
+    color: #333333;
+    height: 100%;
+    padding: 15px 30px;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .proposal{
+    flex-direction: column;
+    .button{
+      margin-bottom: 20px;
+    }
+  }
+}

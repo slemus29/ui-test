@@ -13,7 +13,32 @@
         margin:0;
         font-size: 34px;
         color: white;
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
       }
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .container{
+    padding: 0 !important;
+    .header{ 
+      flex-direction: column;
+      .title{
+        margin: 40px !important;
+      }
+    }
+  }
+}
+
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }

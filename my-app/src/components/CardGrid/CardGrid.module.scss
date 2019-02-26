@@ -4,3 +4,9 @@
   flex-wrap: wrap;
   margin-top: 30px;
 }
+
+@media (max-width: 1356px) {
+  .grid{ 
+    justify-content: center;
+  }
+}

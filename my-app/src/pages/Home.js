@@ -13,7 +13,7 @@ class Home extends Component {
         <Hero />
         <div className={style.content}>
           <Sticker />
-          <h3>Votes</h3>
+          <h3 className={style.votes}>Votes</h3>
           <CardGrid />
           <NameProposalSticker />
           <Footer />

@@ -1,34 +1,135 @@
-.heroCard{
-  color: white;
-  height: 100%;
-  margin: 30px 20px 20px 0;
-  width: 550px;
-  background-color: rgba(0, 0, 0, 0.5);
-  .containerText{
-    padding: 20px 30px;
-    .title{
-      font-size: 41px;
-      font-weight: 700;
-      margin: 0;
+.heroCardContainer{
+  overflow: hidden;
+  position: relative;
+  // animation: moveInBottom .5s ease-out .75s;
+  //       animation-fill-mode: backwards;
+  animation: moveInLeft 1s ease-out;
+  .heroCard{
+    color: white;
+    height: 100%;
+    margin: 30px 20px 20px 0;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    .containerText{
+      padding: 20px 100px 20px 30px;
+      .title{
+        font-size: 55px;
+        font-weight: 400;
+        margin: 0;
+        // animation: moveInLeft 1s ease-out;
+      }
+      .subTitle{
+        font-weight: 300;
+        color: rgb(218, 199, 199);
+      }
+      .description{
+        font-size: 20px;
+        font-weight: 300;
+        color: rgb(218, 199, 199);
+        // animation: moveInRight 1s;
+      }
+      .link{
+        color: rgb(218, 199, 199);
+        font-size: 14px;
+        margin-left: 10px;
+      }
+      .opinion{
+        font-size: 20px;
+      }
+    }
+    
+    .containerThumbs{
+      display: flex;
+      .thumbs{
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        padding: 20px 0;
+      }
+      .iconContainerUp{
+        background-color: #238982;
+      }
+      .iconContainerDown{
+        background: orange;
+      }
+    }
+    
+  }
+  .blur{
+    background-image: url('/images/Pope.png');
+    background-position: 5% 55%;
+    width: 500px;
+    margin: 30px 40px 40px 0;
+    overflow: hidden;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: red;
+  }
+
+  .blur::before{
+    content: ' ';
+    background: inherit;
+    position: absolute;
+    left: -25px;
+    right: 0;
+    top: -25px;
+    bottom: 0;
+    filter: blur(28px);
+  }
+}
+
+
+@media (max-width: 500px) {
+  .heroCardContainer{
+    .heroCard{ 
+      width: 100%;
+    }
+    .blur{
+      height: 90%;
     }
   }
   
-  .containerThumbs{
-    display: flex;
-    .thumbs{
-      margin: 0 auto;
-      text-align: center;
-      width: 100%;
-      padding: 20px 0;
-    }
-    .iconContainerUp{
-      background-color: #238982;
-    }
-    .iconContainerDown{
-      background: orange;
-    }
+}
+
+@keyframes moveInLeft{
+  0%{
+    opacity: 0;
+    transform: translateX(-10rem)
+  }
+  80%{
+    transform: translateX(1rem)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
   }
 }
-.heroCard::before{
-  filter: blur(4px);
+
+@keyframes moveInRight{
+  0%{
+    opacity: 0;
+    transform: translateX(10rem)
+  }
+  80%{
+    transform: translate(-1rem)
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
