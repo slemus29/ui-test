@@ -1,3 +1,4 @@
+@import '../../assets/styles/variables.scss';
 .heroCardContainer{
   overflow: hidden;
   position: relative;
@@ -9,7 +10,7 @@
     height: 100%;
     margin: 30px 20px 20px 0;
     width: 500px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: $black-opacity;
     position: relative;
     z-index: 2;
     .containerText{
@@ -22,16 +23,16 @@
       }
       .subTitle{
         font-weight: 300;
-        color: rgb(218, 199, 199);
+        color: $normal-grey;
       }
       .description{
         font-size: 20px;
         font-weight: 300;
-        color: rgb(218, 199, 199);
+        color: $normal-grey;
         // animation: moveInRight 1s;
       }
       .link{
-        color: rgb(218, 199, 199);
+        color: $normal-grey;
         font-size: 14px;
         margin-left: 10px;
       }
@@ -49,10 +50,10 @@
         padding: 20px 0;
       }
       .iconContainerUp{
-        background-color: #238982;
+        background-color: $blue-darker-opacity;
       }
       .iconContainerDown{
-        background: orange;
+        background: $orange-opacity;
       }
     }
     
@@ -67,7 +68,6 @@
     position: absolute;
     top: 0;
     z-index: 1;
-    background-color: red;
   }
 
   .blur::before{

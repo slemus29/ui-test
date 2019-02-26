@@ -1,3 +1,4 @@
+@import '../../assets/styles/variables.scss';
 .proposal{
   background-image: url('/images/Sticker.png') ;
   background-repeat: no-repeat;
@@ -6,15 +7,15 @@
   justify-content: space-between;
   align-items: center;
   font-size: 32px;
-  color: #656565;
+  color: $light-grey;
   .text{
     margin-left: 20px;
   }
   .button{
     background-color: transparent;
     font-size: 22px;
-    border: solid 3px #333333;
-    color: #333333;
+    border: solid 3px $grey;
+    color: $grey;
     height: 100%;
     padding: 15px 30px;
     margin-right: 40px;

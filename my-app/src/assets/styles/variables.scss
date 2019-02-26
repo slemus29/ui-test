@@ -1,11 +1,20 @@
 // Colors
 $white: #ffffff;
+$white-transparency: #ebebeb;
+$white-opacity: rgba(255, 255, 255, 0.4);
 $blue: #1cbbb4;
+$blue-darker: #238982;
+$blue-darker-opacity: rgba(33, 197, 186, 0.897);
 $grey: #363c3e;
+$normal-grey: rgb(218, 199, 199);
+$light-grey: #595959;
 $red: #bd5764;
 $black: #000;
+$black-opacity: rgba(0, 0, 0, 0.5);
+$black-opacity-light: rgba(0, 0, 0, 0.2);
 $purple: #9f8fb3;
 $orange: #fcb22f;
+$orange-opacity: #ffad1fd7;
 $charcoal-grey:#363c3e;
 $grey-border:#c4c4c4;
 $text-color: $grey;
@@ -16,6 +25,7 @@ $font-vsmall: 13px;
 $font-small: 15px;
 $font-base: 18px;
 $font-large: 21px;
+$font-x-large: 34px;
 // Font Weight
 $font-weight-light: 300;
 $font-weight-normal: 400;

@@ -1,6 +1,7 @@
+@import '../../assets/styles/variables.scss';
 .sticker{
   display: flex;
-  background-color: #ebebeb;
+  background-color: $white-transparency;
   margin: 0 auto;
   align-items: center;
   padding: 10px 0;
