@@ -1,3 +1,5 @@
+@import '../../assets/styles/variables.scss';
+
 .card{
   position: relative;
   height: 550px;
@@ -26,7 +28,7 @@
       margin: 0;
       font-size: 12px;
       .time{
-        font-weight: 700;
+        font-weight: $font-weight-bold;
       }
     }
     .iconContainerNone{
@@ -34,7 +36,7 @@
       width: 40px;
     }
     .iconContainer{
-      background-color: #1cbbb4;
+      background-color: $blue;
       margin-right: 10px;
       animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
@@ -44,7 +46,7 @@
         width: 20px;
         }
         &__:hover{
-          background-color: aqua;
+          background-color: $purple;
         }
     }
     .likeContainer{
@@ -58,21 +60,21 @@
         }
       }
       .iconContainerUp{
-        background-color: #1cbbb4;
+        background-color: $blue;
       }
       .iconContainerDown{
-        background-color: #fcb22f;
+        background-color: $orange;
       }
       .button{
         background:none;
-        color: white;
-        border: 1px solid white;
+        color: $white;
+        border: 1px solid $white;
         padding:0 16px;
         font-size: 14px;
         animation: moveInLeft 1s;
         &:hover{
-          background-color: white;
-          color: black;
+          background-color: $white;
+          color: $black;
         }
       }
     }
@@ -81,7 +83,7 @@
     display: flex;
     font-size: 24px;
     .like{
-      background-color: #1cbbb4;
+      background-color: $blue;
       opacity: 0.8;
       padding: 10px 0;
       margin-top: 10px;
@@ -93,7 +95,7 @@
       }
     }
     .dislike{
-      background-color:#c08520;
+      background-color: $orange;
       opacity: 0.8;
       padding: 10px 0;
       margin-top: 10px;
