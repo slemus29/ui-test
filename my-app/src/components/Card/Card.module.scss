@@ -36,6 +36,8 @@
     .iconContainer{
       background-color: #1cbbb4;
       margin-right: 10px;
+      animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
       height: 40px;
         .thumbDown{
         margin: 10px;
@@ -154,5 +156,16 @@
   100%{
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
   }
 }
