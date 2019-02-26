@@ -5,5 +5,38 @@
     justify-content: flex-end;
     list-style: none;
     color: white;
+    li{
+      font-size: 19px;
+      margin: 0 20px; 
+      cursor: pointer;
+      &:hover{
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .nav{
+    .list{
+      padding: 0;
+      justify-content: center;
+      li{
+        margin: 0 10px; 
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .nav{
+    .list{
+      padding: 0;
+      justify-content: center;
+      li{
+        font-size: 12px;
+        margin: 0 10px; 
+      }
+    }
   }
 }

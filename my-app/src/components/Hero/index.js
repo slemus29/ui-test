@@ -7,9 +7,13 @@ import LiveSpan from '../LiveSpan';
 const Hero = () => {
   return(
     <div className={style.hero}>
-      <h1>Rule of Thumb</h1>
-      <Navigation />
-      <HeroCard />
+      <div className={style.container}>
+        <div className={style.header}>
+          <h1 className={style.title}>Rule of Thumb.</h1>
+          <Navigation />
+        </div>
+        <HeroCard />
+      </div>
       <LiveSpan />
     </div>
   )
