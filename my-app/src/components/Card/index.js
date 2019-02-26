@@ -67,12 +67,12 @@ const Card = ({ data: { image, pullDate, name, category, description, thumbsUp, 
 
   return (
     <div className={style.card}>
-      <img src={image} className={style.image} />
+      <img src={image} className={style.image} alt="personImg"/>
       <div className={style.containerDescription}>
         {currentThumb}
         <div>
           <h3 className={style.title}>{name}</h3>
-          <p>{`${pullDate} in ${category}`}</p>
+          <p className={style.pullDate}><span className={style.time}>{pullDate}</span>{` in ${category}`}</p>
           <p>{toggleDescritpion}</p>
             {votingComponent}
         </div>

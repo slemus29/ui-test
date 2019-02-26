@@ -1,16 +1,35 @@
 .sticker{
   display: flex;
-  background-color: lightgray;
+  background-color: #ebebeb;
   margin: 0 auto;
   align-items: center;
+  padding: 10px 0;
   .leftContainer{
     text-align: center;
     flex: 3;
+    .title{
+      margin: 0;
+      font-weight: 200;
+    }
+    .subtitle{
+      margin: 0;
+      font-size: 42px;
+      line-height: 1;
+    }
   }
   .description{
     flex: 7;
   }
   .button{
     flex: 1;
+    background-color: transparent;
+    font-size:27px;
+  }
+}
+
+@media (max-width: 1054px) {
+  .sticker{ 
+    flex-direction: column;
+    padding: 20px;
   }
 }

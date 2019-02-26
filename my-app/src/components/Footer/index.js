@@ -18,8 +18,8 @@ const Footer = () => {
       <div className={style.socialNetwork}>
         <ul className={style.list}>
           <li>Follow us</li>
-          <li><img src={facebook}/></li>
-          <li><img src={twitter}/></li>
+          <li><img src={facebook} alt="facebook"/></li>
+          <li><img src={twitter} alt="twitter"/></li>
         </ul>
       </div>
     </div>
